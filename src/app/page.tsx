@@ -2,8 +2,9 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './page.module.css'
-import HomeSlider from '@/components/HomeSlider/HomeSlider'
+import dynamic from 'next/dynamic'
 import MovieCarousel from '@/components/moviecarousel/MovieCarousel'
+const HomeSlider = dynamic(() => import('@/components/HomeSlider/HomeSlider'), { ssr: false });
 
 export default function Home() {
 
